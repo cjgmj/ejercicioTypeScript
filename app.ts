@@ -82,3 +82,11 @@ let array: number[] = [1, 23, 4, 5, 6, 7];
 let villanosList: string[] = ["Cráneo rojo", "Dormammu", "Duende Verde"];
 
 console.log(villanosList[0].charAt(0));
+
+// ********** Tuples **********
+// Es un array del cuál sabemos que tipo de dato contendrá cada posición
+// y cual es su tamaño total
+// let heroe: [string, number] = ["Dr. Strange", 100];
+let heroe: [string, number, boolean] = ["Dr. Strange", 100, false];
+
+heroe.push(true); // Es válido
