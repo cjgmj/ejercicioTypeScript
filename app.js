@@ -90,3 +90,9 @@ function llamarBatman() {
     console.log("Mostrar la Bati-señal");
 }
 var mensaje = llamarBatman();
+// ********** Never **********
+// Sirven para hacer puntos críticos en el programa o líneas que nunca deberían suceder
+function error(mensaje) {
+    throw new Error(mensaje);
+}
+error("Error crítico");
