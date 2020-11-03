@@ -36,3 +36,24 @@ if (avengers > villanos) {
 
 otros = 123;
 otros = 123.123;
+
+// Strings
+let batman: string = "Batman";
+let superman: string = "Superman";
+let aquaman: string = `Aquaman`;
+let joker = "Joker"; // No recomendada
+let wonderWoman: String; // Interfaz
+
+console.log(batman);
+console.log(superman);
+console.log(aquaman);
+
+let concatenar: string =
+  "Los héroes son: " + batman + ", " + superman + " y " + aquaman;
+
+// La mejor manera para concatenar son los templates literales
+let concat: string = `Los héros son: ${batman}, ${superman} y ${aquaman}`;
+
+console.log(concat);
+
+// Any
