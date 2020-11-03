@@ -95,4 +95,8 @@ var mensaje = llamarBatman();
 function error(mensaje) {
     throw new Error(mensaje);
 }
-error("Error crítico");
+// error("Error crítico"); // El código a continuación de esta llamada es ignorado
+// ********** Aserciones de tipo **********
+var cualquierValor = "Cualquier cosa";
+var largoDelString = cualquierValor.length; // De esta forma se hace el cast
+console.log(largoDelString);

@@ -124,4 +124,11 @@ let mensaje = llamarBatman();
 function error(mensaje: string): never {
   throw new Error(mensaje);
 }
-error("Error crítico");
+// error("Error crítico"); // El código a continuación de esta llamada es ignorado
+
+// ********** Aserciones de tipo **********
+let cualquierValor: any = "Cualquier cosa";
+
+let largoDelString: number = (<string>cualquierValor).length; // De esta forma se hace el cast
+
+console.log(largoDelString);
