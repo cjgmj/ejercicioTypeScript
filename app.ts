@@ -1,6 +1,6 @@
 console.log("Hola mundo");
 
-// Booleans
+// ********** Booleans **********
 let esSuperman: boolean = true;
 let esBatman: boolean;
 let esIronman = true; // No recomendada
@@ -19,7 +19,7 @@ function convertirClark() {
   return false;
 }
 
-// Numbers
+// ********** Numbers **********
 // Soportan enteros y números decimales
 let avengers: number = 5;
 let villanos: number;
@@ -37,7 +37,7 @@ if (avengers > villanos) {
 otros = 123;
 otros = 123.123;
 
-// Strings
+// ********** Strings **********
 let batman: string = "Batman";
 let superman: string = "Superman";
 let aquaman: string = `Aquaman`;
@@ -56,4 +56,23 @@ let concat: string = `Los héros son: ${batman}, ${superman} y ${aquaman}`;
 
 console.log(concat);
 
-// Any
+// ********** Any **********
+// Pueden ser cualquier tipo, cuando las variables no tienen valor y tampoco se
+// indica un tipo, por defecto todas son tipo any
+let vengador: any;
+let existe;
+let derrotas;
+
+vengador = "Dr. Strange";
+
+console.log(vengador.charAt(0));
+
+vengador = 150.5555;
+
+console.log(vengador.toFixed(2)); // Redondea el valor
+
+vengador = true;
+
+console.log(vengador);
+console.log(existe); // Por defecto tiene valor undefined
+console.log(derrotas); // Por defecto tiene valor undefined

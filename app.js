@@ -1,6 +1,6 @@
 "use strict";
 console.log("Hola mundo");
-// Booleans
+// ********** Booleans **********
 var esSuperman = true;
 var esBatman;
 var esIronman = true; // No recomendada
@@ -16,7 +16,7 @@ esSuperman = convertirClark();
 function convertirClark() {
     return false;
 }
-// Numbers
+// ********** Numbers **********
 // Soportan enteros y números decimales
 var avengers = 5;
 var villanos;
@@ -31,7 +31,7 @@ else {
 }
 otros = 123;
 otros = 123.123;
-// Strings
+// ********** Strings **********
 var batman = "Batman";
 var superman = "Superman";
 var aquaman = "Aquaman";
@@ -44,4 +44,17 @@ var concatenar = "Los héroes son: " + batman + ", " + superman + " y " + aquama
 // La mejor manera para concatenar son los templates literales
 var concat = "Los h\u00E9ros son: " + batman + ", " + superman + " y " + aquaman;
 console.log(concat);
-// Any
+// ********** Any **********
+// Pueden ser cualquier tipo, cuando las variables no tienen valor y tampoco se
+// indica un tipo, por defecto todas son tipo any
+var vengador;
+var existe;
+var derrotas;
+vengador = "Dr. Strange";
+console.log(vengador.charAt(0));
+vengador = 150.5555;
+console.log(vengador.toFixed(2)); // Redondea el valor
+vengador = true;
+console.log(vengador);
+console.log(existe); // Por defecto tiene valor undefined
+console.log(derrotas); // Por defecto tiene valor undefined
