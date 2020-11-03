@@ -100,3 +100,10 @@ function error(mensaje) {
 var cualquierValor = "Cualquier cosa";
 var largoDelString = cualquierValor.length; // De esta forma se hace el cast
 console.log(largoDelString);
+// ********** Null y Undefined **********
+var nada = undefined;
+var nulo = null;
+var ironman;
+ironman = "Tony";
+// ironman = null; // No está permitido
+// ironman = undefined; // No está permitido

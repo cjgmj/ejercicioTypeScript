@@ -132,3 +132,13 @@ let cualquierValor: any = "Cualquier cosa";
 let largoDelString: number = (<string>cualquierValor).length; // De esta forma se hace el cast
 
 console.log(largoDelString);
+
+// ********** Null y Undefined **********
+let nada: undefined = undefined;
+let nulo: null = null;
+
+let ironman: string;
+
+ironman = "Tony";
+// ironman = null; // No está permitido
+// ironman = undefined; // No está permitido
