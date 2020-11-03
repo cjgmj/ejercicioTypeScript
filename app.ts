@@ -76,3 +76,9 @@ vengador = true;
 console.log(vengador);
 console.log(existe); // Por defecto tiene valor undefined
 console.log(derrotas); // Por defecto tiene valor undefined
+
+// ********** Arrays **********
+let array: number[] = [1, 23, 4, 5, 6, 7];
+let villanosList: string[] = ["Cráneo rojo", "Dormammu", "Duende Verde"];
+
+console.log(villanosList[0].charAt(0));
