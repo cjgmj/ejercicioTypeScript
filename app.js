@@ -68,3 +68,20 @@ console.log(villanosList[0].charAt(0));
 // let heroe: [string, number] = ["Dr. Strange", 100];
 var heroe = ["Dr. Strange", 100, false];
 heroe.push(true); // Es válido
+// ********** Enums **********
+var Volumen;
+(function (Volumen) {
+    // Sin dar valores
+    //   min, // 0
+    //   medio, // 1
+    //   max, // 2
+    // Dando valores
+    Volumen[Volumen["min"] = 1] = "min";
+    Volumen[Volumen["medio"] = 5] = "medio";
+    Volumen[Volumen["max"] = 10] = "max";
+})(Volumen || (Volumen = {}));
+var audio = Volumen.min;
+console.log(audio);
+console.log(Volumen);
+console.log(Volumen[5]);
+console.log(Volumen["medio"]);

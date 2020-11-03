@@ -90,3 +90,24 @@ console.log(villanosList[0].charAt(0));
 let heroe: [string, number, boolean] = ["Dr. Strange", 100, false];
 
 heroe.push(true); // Es válido
+
+// ********** Enums **********
+enum Volumen {
+  // Sin dar valores
+  //   min, // 0
+  //   medio, // 1
+  //   max, // 2
+
+  // Dando valores
+  min = 1,
+  medio = 5,
+  max = 10,
+}
+
+let audio: number = Volumen.min;
+
+console.log(audio);
+
+console.log(Volumen);
+console.log(Volumen[5]);
+console.log(Volumen["medio"]);
