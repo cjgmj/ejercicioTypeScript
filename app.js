@@ -85,3 +85,8 @@ console.log(audio);
 console.log(Volumen);
 console.log(Volumen[5]);
 console.log(Volumen["medio"]);
+// ********** Void **********
+function llamarBatman() {
+    console.log("Mostrar la Bati-señal");
+}
+var mensaje = llamarBatman();
