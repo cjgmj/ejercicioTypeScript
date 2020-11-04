@@ -24,8 +24,8 @@ console.log(nombre);
 // ********** Parámetros opcionales **********
 // Indicamos que un parámetro es opcional con ? detrás del nombre del argumento
 function nombreCompletoOpcional(nombre: string, apellido?: string): string {
+  // Comprueba que el apellido existe
   if (apellido) {
-    // Comprueba que el apellido existe
     return `${nombre} ${apellido}`;
   }
 
@@ -35,5 +35,30 @@ function nombreCompletoOpcional(nombre: string, apellido?: string): string {
 let nombreOpcional = nombreCompletoOpcional("John");
 
 console.log(nombreOpcional);
+
+// ********** Parámetros por defecto **********
+function nombreCompletoDefault(
+  nombre: string,
+  apellido: string,
+  capitalizado: boolean = false
+): string {
+  if (capitalizado) {
+    return `${capitalizar(nombre)} ${capitalizar(apellido)}`;
+  }
+
+  return `${nombre} ${apellido}`;
+}
+
+let nombreDefault = nombreCompletoDefault("john", "doe");
+let nombreCapitalizado = nombreCompletoDefault("john", "doe", true);
+
+console.log(nombreDefault);
+console.log(nombreCapitalizado);
+
+function capitalizar(palabra: string): string {
+  return `${palabra.charAt(0).toUpperCase()}${palabra
+    .substring(1)
+    .toLowerCase()}`;
+}
 
 export {};
