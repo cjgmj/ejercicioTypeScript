@@ -12,3 +12,9 @@ flash = {
     edad: 500,
     poderes: ["Volar"],
 };
+// ********** Tipos específicos **********
+var persona = {
+    nombre: "John",
+    apellido: "Doe",
+    edad: 33,
+};

@@ -13,3 +13,14 @@ flash = {
   edad: 500,
   poderes: ["Volar"],
 };
+
+// ********** Tipos específicos **********
+let persona: {
+  apellido: string;
+  edad: number;
+  nombre: string;
+} = {
+  nombre: "John",
+  apellido: "Doe",
+  edad: 33,
+};
