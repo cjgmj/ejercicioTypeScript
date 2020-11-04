@@ -56,3 +56,12 @@ let per1: Persona = {
     return this.nombre;
   },
 };
+
+// ********** Múltiples tipos permitidos **********
+// Para indicar que una variable puede tener varios tipos usamos
+// | entre los tipos
+let arg: boolean | number | string = true;
+
+arg = 10;
+
+arg = "John";

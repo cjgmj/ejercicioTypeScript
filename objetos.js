@@ -35,3 +35,9 @@ var per1 = {
         return this.nombre;
     },
 };
+// ********** Múltiples tipos permitidos **********
+// Para indicar que una variable puede tener varios tipos usamos
+// | entre los tipos
+var arg = true;
+arg = 10;
+arg = "John";
