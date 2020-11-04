@@ -6,10 +6,19 @@ function imprimeHeroe(): string {
 }
 
 let activarBatisenal = function () {
-  return "Bati-Señal activada";
+  return "Bati-señal activada";
 };
 
 console.log(imprimeHeroe());
 console.log(activarBatisenal());
+
+// ********** Parámetros obligatorios **********
+function nombreCompleto(nombre: string, apellido: string): string {
+  return `${nombre} ${apellido}`;
+}
+
+let nombre = nombreCompleto("John", "Doe");
+
+console.log(nombre);
 
 export {};
