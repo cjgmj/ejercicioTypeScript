@@ -27,3 +27,11 @@ var personaMetodo = {
         return this.nombre;
     },
 };
+var per1 = {
+    nombre: "John",
+    apellido: "Doe",
+    edad: 33,
+    getNombre: function () {
+        return this.nombre;
+    },
+};

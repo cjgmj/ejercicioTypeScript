@@ -39,3 +39,20 @@ let personaMetodo: {
     return this.nombre;
   },
 };
+
+// ********** Tipos personalizados **********
+type Persona = {
+  apellido: string;
+  nombre: string;
+  edad: number;
+  getNombre: () => string;
+};
+
+let per1: Persona = {
+  nombre: "John",
+  apellido: "Doe",
+  edad: 33,
+  getNombre() {
+    return this.nombre;
+  },
+};
