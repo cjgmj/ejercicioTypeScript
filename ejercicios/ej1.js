@@ -1,9 +1,10 @@
 "use strict";
 // Base
+Object.defineProperty(exports, "__esModule", { value: true });
 // // Tipos
-// var batmanEj = "Bruce";
-// var supermanEj = "Clark";
-// var existeEj = false;
+// var batman = "Bruce";
+// var superman = "Clark";
+// var existe = false;
 // // Tuplas
 // var parejaHeroes = [batman, superman];
 // var villano = ["Lex Lutor", 5, true];
@@ -27,9 +28,9 @@
 // console.log(largoDelPoder);
 // Solución
 // Tipos
-var batmanEj = "Bruce";
-var supermanEj = "Clark";
-var existeEj = false;
+var batman = "Bruce";
+var superman = "Clark";
+var existe = false;
 // Tuplas
 var parejaHeroes = [batman, superman];
 var villano = ["Lex Lutor", 5, true];

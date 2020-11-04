@@ -1,10 +1,10 @@
 // Base
 
 // // Tipos
-// var batmanEj = "Bruce";
-// var supermanEj = "Clark";
+// var batman = "Bruce";
+// var superman = "Clark";
 
-// var existeEj = false;
+// var existe = false;
 
 // // Tuplas
 // var parejaHeroes = [batman, superman];
@@ -35,10 +35,10 @@
 
 // Solución
 // Tipos
-let batmanEj: string = "Bruce";
-let supermanEj: string = "Clark";
+let batman: string = "Bruce";
+let superman: string = "Clark";
 
-let existeEj: boolean = false;
+let existe: boolean = false;
 
 // Tuplas
 let parejaHeroes: [string, string] = [batman, superman];
@@ -73,3 +73,5 @@ function pedir_ayuda(): void {
 let poder = "100";
 let largoDelPoder: number = (<string>poder).length;
 console.log(largoDelPoder);
+
+export {};
