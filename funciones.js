@@ -56,3 +56,20 @@ var superman = nombreCompletoRest("Clark", "Joseph", "Kent");
 var ironman = nombreCompletoRest("Anthony", "Edward", "Tony", "Stark");
 console.log(superman);
 console.log(ironman);
+// ********** Tipo función **********
+function sumar(a, b) {
+    return a + b;
+}
+function saludar(nombre) {
+    return "I'm " + nombre;
+}
+function salvarMundo() {
+    console.log("El mundo está salvado!");
+}
+// () se introduce el número de parámetros que debería recibir la función
+// => indica el tipo de devuelve la función
+var miFuncion;
+// miFuncion = 10;
+// Solo esta cumple la condición
+miFuncion = sumar;
+console.log(miFuncion(5, 5));

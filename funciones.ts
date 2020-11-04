@@ -72,4 +72,33 @@ let ironman: string = nombreCompletoRest("Anthony", "Edward", "Tony", "Stark");
 console.log(superman);
 console.log(ironman);
 
+// ********** Tipo función **********
+function sumar(a: number, b: number): number {
+  return a + b;
+}
+
+function saludar(nombre: string): string {
+  return `I'm ${nombre}`;
+}
+
+function salvarMundo(): void {
+  console.log("El mundo está salvado!");
+}
+
+// () se introduce el número de parámetros que debería recibir la función
+// => indica el tipo de devuelve la función
+let miFuncion: (x: number, y: number) => number;
+
+// miFuncion = 10;
+
+// Solo esta cumple la condición
+miFuncion = sumar;
+console.log(miFuncion(5, 5));
+
+// miFuncion = saludar;
+// console.log(miFuncion("John"));
+
+// miFuncion = salvarMundo;
+// miFuncion();
+
 export {};
