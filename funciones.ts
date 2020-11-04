@@ -61,4 +61,15 @@ function capitalizar(palabra: string): string {
     .toLowerCase()}`;
 }
 
+// ********** Parámetros REST **********
+function nombreCompletoRest(nombre: string, ...params: string[]): string {
+  return `${nombre} ${params.join(" ")}`;
+}
+
+let superman: string = nombreCompletoRest("Clark", "Joseph", "Kent");
+let ironman: string = nombreCompletoRest("Anthony", "Edward", "Tony", "Stark");
+
+console.log(superman);
+console.log(ironman);
+
 export {};

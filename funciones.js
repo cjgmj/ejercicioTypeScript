@@ -44,3 +44,15 @@ function capitalizar(palabra) {
         .substring(1)
         .toLowerCase();
 }
+// ********** Parámetros REST **********
+function nombreCompletoRest(nombre) {
+    var params = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        params[_i - 1] = arguments[_i];
+    }
+    return nombre + " " + params.join(" ");
+}
+var superman = nombreCompletoRest("Clark", "Joseph", "Kent");
+var ironman = nombreCompletoRest("Anthony", "Edward", "Tony", "Stark");
+console.log(superman);
+console.log(ironman);
