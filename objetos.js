@@ -41,3 +41,16 @@ var per1 = {
 var arg = true;
 arg = 10;
 arg = "John";
+// ********** Revisar tipo **********
+var algo = 123;
+algo = "Hola";
+algo = function () {
+    return null;
+};
+console.log(typeof algo === "number");
+if (typeof algo === "number") {
+    console.log("Es un número");
+}
+else {
+    console.log("No es un número");
+}

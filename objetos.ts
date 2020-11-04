@@ -65,3 +65,20 @@ let arg: boolean | number | string = true;
 arg = 10;
 
 arg = "John";
+
+// ********** Revisar tipo **********
+let algo: any = 123;
+
+algo = "Hola";
+
+algo = function () {
+  return null;
+};
+
+console.log(typeof algo === "number");
+
+if (typeof algo === "number") {
+  console.log("Es un número");
+} else {
+  console.log("No es un número");
+}
