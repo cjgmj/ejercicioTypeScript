@@ -24,3 +24,18 @@ let persona: {
   apellido: "Doe",
   edad: 33,
 };
+
+// ********** Métodos en los objetos **********
+let personaMetodo: {
+  apellido: string;
+  edad: number;
+  nombre: string;
+  getNombre: () => string;
+} = {
+  nombre: "John",
+  apellido: "Doe",
+  edad: 33,
+  getNombre() {
+    return this.nombre;
+  },
+};

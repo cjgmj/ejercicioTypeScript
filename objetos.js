@@ -18,3 +18,12 @@ var persona = {
     apellido: "Doe",
     edad: 33,
 };
+// ********** Métodos en los objetos **********
+var personaMetodo = {
+    nombre: "John",
+    apellido: "Doe",
+    edad: 33,
+    getNombre: function () {
+        return this.nombre;
+    },
+};
