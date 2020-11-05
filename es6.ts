@@ -16,3 +16,29 @@ if (true) {
 }
 
 console.log(nombre2);
+
+// ********** Variables CONST **********
+// Son variable que no pueden mutar una vez definidas
+// Generalmente las constantes van en mayúsculas
+const OPCIONES: string = "Activo";
+
+// const OPCIONES: string; // No se puede definir sin valor
+// OPCIONES = "Desactivado"; // No se puede hacer
+
+if (true) {
+  const OPCIONES: string = "Desactivado"; // Lo permite al estar en otro scope
+}
+
+for (const i of [1, 2, 3, 4, 5, 6]) {
+  console.log(i);
+}
+
+const CONFIGURACION = {
+  estado: true,
+  audio: 10,
+  ultima: "main",
+};
+
+// CONFIGURACION = {}; // No se puede hacer
+
+CONFIGURACION.estado = false; // Está permitido
