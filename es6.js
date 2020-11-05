@@ -79,9 +79,31 @@ console.log(ironmanFromObject);
 console.log(visionFromObject);
 // console.log(thorFromObject);
 // ********** Destructuración de arrays **********
-var avangersArr = ["Samuel L. Jackson", "Robert Downey Jr.", "Paul Bettany"];
-// let [avanger1, avanger2, avanger3] = avangersArr;
-var avanger1 = avangersArr[0], avanger3 = avangersArr[2]; // Obtener los valores del 1 y el 3
-console.log(avanger1);
-// console.log(avanger2);
-console.log(avanger3);
+var avengersArr = ["Samuel L. Jackson", "Robert Downey Jr.", "Paul Bettany"];
+// let [avenger1, avenger2, avenger3] = avengersArr;
+var avenger1 = avengersArr[0], avenger3 = avengersArr[2]; // Obtener los valores del 1 y el 3
+console.log(avenger1);
+// console.log(avenger2);
+console.log(avenger3);
+// ********** Ciclo for of **********
+var thorArr = {
+    nombre: "Thor",
+    arma: "Mjolnir",
+};
+var ironmanArr = {
+    nombre: "Ironman",
+    arma: "Armorsuit",
+};
+var capitanAmericaArr = {
+    nombre: "Capitán América",
+    arma: "Escudo",
+};
+var avengersForOf = [thorArr, ironmanArr, capitanAmericaArr];
+// for (let i = 0; i < avengersForOf.length; i++) {
+//   let avenger = avengersForOf[i];
+//   console.log(avenger.nombre, avenger.arma);
+// }
+for (var _b = 0, avengersForOf_1 = avengersForOf; _b < avengersForOf_1.length; _b++) {
+    var avenger = avengersForOf_1[_b];
+    console.log(avenger.nombre, avenger.arma);
+}
