@@ -42,3 +42,19 @@ const CONFIGURACION = {
 // CONFIGURACION = {}; // No se puede hacer
 
 CONFIGURACION.estado = false; // Está permitido
+
+// ********** Templates literales **********
+let nombre1: string = "John";
+let apellido1: string = "Doe";
+
+function getNombreCompleto(): string {
+  return `${nombre1} ${apellido1}`;
+}
+
+let informacion: string = `1. Esta es una línera normal
+2. Hola ${nombre1}
+3. Apellido: ${apellido1}
+4. Nombre completo: ${getNombreCompleto()}
+5. 5 + 7 = ${5 + 7}`;
+
+console.log(informacion);

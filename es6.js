@@ -32,3 +32,11 @@ var CONFIGURACION = {
 };
 // CONFIGURACION = {}; // No se puede hacer
 CONFIGURACION.estado = false; // Está permitido
+// ********** Templates literales **********
+var nombre1 = "John";
+var apellido1 = "Doe";
+function getNombreCompleto() {
+    return nombre1 + " " + apellido1;
+}
+var informacion = "1. Esta es una l\u00EDnera normal\n2. Hola " + nombre1 + "\n3. Apellido: " + apellido1 + "\n4. Nombre completo: " + getNombreCompleto() + "\n5. 5 + 7 = " + (5 + 7);
+console.log(informacion);
