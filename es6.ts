@@ -149,3 +149,29 @@ let avengersForOf = [thorArr, ironmanArr, capitanAmericaArr];
 for (const avenger of avengersForOf) {
   console.log(avenger.nombre, avenger.arma);
 }
+
+// ********** Clases **********
+class Avenger {
+  nombre: string;
+  poder: string;
+
+  constructor(nombre: string, poder: string) {
+    this.nombre = nombre;
+    this.poder = poder;
+  }
+}
+
+class AvengerVolador extends Avenger {
+  vuela: boolean;
+
+  constructor(nombre: string, poder: string) {
+    super(nombre, poder);
+    this.vuela = true;
+  }
+}
+
+let hulkCl = new Avenger("Hulk", "Fuerza");
+let falconCl = new AvengerVolador("Falcon", "Volar");
+
+console.log(hulkCl);
+console.log(falconCl);
