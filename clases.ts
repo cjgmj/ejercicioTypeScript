@@ -1,11 +1,17 @@
 // ********** Clases básicas **********
 class Avenger {
-  nombre: string = "";
-  equipo: string = "";
-  nombreReal: string = "";
+  // ********** Propiedades públicas **********
+  // Si no se especifica por defecto son públicas
+  public nombre: string = "";
 
-  puedePelear: boolean = false;
-  peleasGanadas: number = 0;
+  // ********** Propiedades protegidas **********
+  protected equipo: string = "";
+
+  // ********** Propiedades privadas **********
+  private nombreReal: string = "";
+
+  private puedePelear: boolean = false;
+  private peleasGanadas: number = 0;
 
   // ********** Constructores **********
   constructor(nombre: string, equipo: string, nombreReal: string) {

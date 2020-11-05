@@ -4,8 +4,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Avenger = /** @class */ (function () {
     // ********** Constructores **********
     function Avenger(nombre, equipo, nombreReal) {
+        // ********** Propiedades públicas **********
+        // Si no se especifica por defecto son públicas
         this.nombre = "";
+        // ********** Propiedades protegidas **********
         this.equipo = "";
+        // ********** Propiedades privadas **********
         this.nombreReal = "";
         this.puedePelear = false;
         this.peleasGanadas = 0;
