@@ -58,3 +58,34 @@ let informacion: string = `1. Esta es una línera normal
 5. 5 + 7 = ${5 + 7}`;
 
 console.log(informacion);
+
+// ********** Funciones de flecha **********
+// function sumar(a:number, b:number): number {
+//     return a + b;
+// }
+
+// Es igual que la función comentada
+const sumar = (a: number, b: number): number => a + b;
+
+console.log(sumar(2, 2));
+
+// function darOrdenHulk(orden: string): string {
+//   return `Hulk ${orden}`;
+// }
+
+const darOrdenHulk = (orden: string): string => `Hulk ${orden}`;
+
+console.log(darOrdenHulk("golpea"));
+
+let capitanAmerica = {
+  nombre: "Hulk",
+  darOrdenHulk: function () {
+    // setTimeout(function () {
+    //   console.log(`${this.nombre} golpea`); // El this cambia de scope apuntando al objeto global
+    // }, 1000);
+    // Las funciones de flecha no cambian el objeto this, this va a apuntar al scope superior
+    setTimeout(() => console.log(`${this.nombre} golpea`), 1000);
+  },
+};
+
+capitanAmerica.darOrdenHulk();

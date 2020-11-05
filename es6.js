@@ -40,3 +40,27 @@ function getNombreCompleto() {
 }
 var informacion = "1. Esta es una l\u00EDnera normal\n2. Hola " + nombre1 + "\n3. Apellido: " + apellido1 + "\n4. Nombre completo: " + getNombreCompleto() + "\n5. 5 + 7 = " + (5 + 7);
 console.log(informacion);
+// ********** Funciones de flecha **********
+// function sumar(a:number, b:number): number {
+//     return a + b;
+// }
+// Es igual que la función comentada
+var sumar = function (a, b) { return a + b; };
+console.log(sumar(2, 2));
+// function darOrdenHulk(orden: string): string {
+//   return `Hulk ${orden}`;
+// }
+var darOrdenHulk = function (orden) { return "Hulk " + orden; };
+console.log(darOrdenHulk("golpea"));
+var capitanAmerica = {
+    nombre: "Hulk",
+    darOrdenHulk: function () {
+        var _this = this;
+        // setTimeout(function () {
+        //   console.log(`${this.nombre} golpea`); // El this cambia de scope apuntando al objeto global
+        // }, 1000);
+        // Las funciones de flecha no cambian el objeto this, this va a apuntar al scope superior
+        setTimeout(function () { return console.log(_this.nombre + " golpea"); }, 1000);
+    },
+};
+capitanAmerica.darOrdenHulk();
