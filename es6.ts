@@ -89,3 +89,26 @@ let capitanAmerica = {
 };
 
 capitanAmerica.darOrdenHulk();
+
+// ********** Destructuración de objetos **********
+let avengersOb = {
+  nick: "Samuel L. Jackson",
+  ironman: "Robert Downey Jr.",
+  vision: "Paul Bettany",
+};
+
+// let nickFromObject = avengersOb.nick;
+// let ironmanFromObject = avengersOb.ironman;
+// let visionFromObject = avengersOb.vision;
+
+let {
+  nick: nickFromObject,
+  ironman: ironmanFromObject,
+  vision: visionFromObject,
+  //   thorFromObject = "Chris Hemsworth", // Válido para ES6
+} = avengersOb;
+
+console.log(nickFromObject);
+console.log(ironmanFromObject);
+console.log(visionFromObject);
+// console.log(thorFromObject);
