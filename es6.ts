@@ -112,3 +112,13 @@ console.log(nickFromObject);
 console.log(ironmanFromObject);
 console.log(visionFromObject);
 // console.log(thorFromObject);
+
+// ********** Destructuración de arrays **********
+let avangersArr = ["Samuel L. Jackson", "Robert Downey Jr.", "Paul Bettany"];
+
+// let [avanger1, avanger2, avanger3] = avangersArr;
+let [avanger1, , avanger3] = avangersArr; // Obtener los valores del 1 y el 3
+
+console.log(avanger1);
+// console.log(avanger2);
+console.log(avanger3);
