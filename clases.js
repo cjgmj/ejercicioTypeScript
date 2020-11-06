@@ -85,6 +85,37 @@ var Xmen = /** @class */ (function (_super) {
     };
     return Xmen;
 }(AvengerH));
-var ciclope = new Xmen("Ciclope", "Scott");
-console.log(ciclope);
-console.log(ciclope.getNombre());
+var ciclopeH = new Xmen("Cíclope", "Scott");
+console.log(ciclopeH);
+console.log(ciclopeH.getNombre());
+// ********** Gets y Sets **********
+var AvengerGS = /** @class */ (function () {
+    function AvengerGS(nombre) {
+        this._nombre = nombre;
+    }
+    Object.defineProperty(AvengerGS.prototype, "nombre", {
+        get: function () {
+            if (this._nombre) {
+                return this._nombre;
+            }
+            return "No tiene nombre";
+        },
+        set: function (nombre) {
+            if (nombre.length <= 3) {
+                // console.error("El nombre tiene que tener más de tres caracteres");
+                // return;
+                throw new Error("El nombre tiene que tener más de tres caracteres");
+            }
+            this._nombre = nombre;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return AvengerGS;
+}());
+var ciclopeGS = new AvengerGS();
+console.log(ciclopeGS.nombre);
+ciclopeGS.nombre = "Cíclope";
+console.log(ciclopeGS.nombre);
+ciclopeGS.nombre = "Lee";
+console.log(ciclopeGS.nombre);

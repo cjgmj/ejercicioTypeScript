@@ -78,9 +78,48 @@ class Xmen extends AvengerH {
   }
 }
 
-let ciclope: Xmen = new Xmen("Ciclope", "Scott");
+let ciclopeH: Xmen = new Xmen("Cíclope", "Scott");
 
-console.log(ciclope);
-console.log(ciclope.getNombre());
+console.log(ciclopeH);
+console.log(ciclopeH.getNombre());
+
+// ********** Gets y Sets **********
+class AvengerGS {
+  private _nombre: string | undefined;
+
+  constructor(nombre?: string) {
+    this._nombre = nombre;
+  }
+
+  get nombre(): string {
+    if (this._nombre) {
+      return this._nombre;
+    }
+
+    return "No tiene nombre";
+  }
+
+  set nombre(nombre: string) {
+    if (nombre.length <= 3) {
+      // console.error("El nombre tiene que tener más de tres caracteres");
+      // return;
+      throw new Error("El nombre tiene que tener más de tres caracteres");
+    }
+
+    this._nombre = nombre;
+  }
+}
+
+let ciclopeGS: AvengerGS = new AvengerGS();
+
+console.log(ciclopeGS.nombre);
+
+ciclopeGS.nombre = "Cíclope";
+
+console.log(ciclopeGS.nombre);
+
+ciclopeGS.nombre = "Lee";
+
+console.log(ciclopeGS.nombre);
 
 export {};
