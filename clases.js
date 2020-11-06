@@ -102,9 +102,9 @@ var AvengerGS = /** @class */ (function () {
         },
         set: function (nombre) {
             if (nombre.length <= 3) {
-                // console.error("El nombre tiene que tener más de tres caracteres");
-                // return;
-                throw new Error("El nombre tiene que tener más de tres caracteres");
+                console.error("El nombre tiene que tener más de tres caracteres");
+                return;
+                // throw new Error("El nombre tiene que tener más de tres caracteres");
             }
             this._nombre = nombre;
         },
@@ -119,3 +119,17 @@ ciclopeGS.nombre = "Cíclope";
 console.log(ciclopeGS.nombre);
 ciclopeGS.nombre = "Lee";
 console.log(ciclopeGS.nombre);
+// ********** Métodos y propiedades estáticos **********
+var XmenE = /** @class */ (function () {
+    function XmenE() {
+    }
+    XmenE.crearXmen = function () {
+        console.log("Se creó un xmen estátiico");
+        return new XmenE();
+    };
+    XmenE.nombre = "Wolverine";
+    return XmenE;
+}());
+var wolverineE = XmenE.crearXmen();
+console.log(XmenE.nombre);
+console.log(wolverineE);
