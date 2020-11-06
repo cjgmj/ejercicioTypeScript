@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function enviarMision(xmen) {
     console.log("Enviando a: " + xmen.nombre);
     xmen.regenerar("Logan");
@@ -25,3 +26,5 @@ var Mutante = /** @class */ (function () {
 }());
 var wolverineC = new Mutante();
 wolverineC.regenerar("Wolverine");
+var sumar = function (a, b) { return a + b; };
+var restar = function (a, b) { return a - b; };

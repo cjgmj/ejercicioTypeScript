@@ -43,3 +43,14 @@ class Mutante implements Xmen {
 let wolverineC = new Mutante();
 
 wolverineC.regenerar("Wolverine");
+
+// ********** Interfaces para las funciones **********
+interface DosNumerosFunc {
+  (num1: number, num2: number): number;
+}
+
+let sumar: DosNumerosFunc = (a: number, b: number): number => a + b;
+
+let restar: DosNumerosFunc = (a: number, b: number): number => a - b;
+
+export {};
