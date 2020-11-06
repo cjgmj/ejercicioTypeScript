@@ -12,6 +12,10 @@ Para iniciar el proyecto ejecutamos en el terminal de comandos `tsc -init`, esto
 
 Podemos ver el motivo del error [aquí](https://medium.com/@muravitskiy.mail/cannot-redeclare-block-scoped-variable-varname-how-to-fix-b1c3d9cc8206).
 
+#### Modificador !
+
+Indica que el valor será desconocido en el momento de la instancia. Usaremos el modificador ! (Definite Assignment Assertion), para indicarle a TypeScript que sabemos que ese valor se definirá de alguna manera en el momento en que lo usemos, y que TypeScript no debe preocuparse de ese valor hasta entonces.
+
 ### Archivo tsconfig.json
 
 #### Controlar null

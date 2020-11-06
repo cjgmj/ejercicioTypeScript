@@ -29,3 +29,17 @@ let wolverine: Xmen = {
 
 enviarMision(wolverine);
 enviarCuartel(wolverine);
+
+// ********** Interfaces en las clases **********
+class Mutante implements Xmen {
+  nombre!: string;
+  poder?: string | undefined;
+
+  regenerar(nombre: string): void {
+    console.log(`${nombre} regenerado`);
+  }
+}
+
+let wolverineC = new Mutante();
+
+wolverineC.regenerar("Wolverine");

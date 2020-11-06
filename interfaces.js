@@ -14,3 +14,14 @@ var wolverine = {
 };
 enviarMision(wolverine);
 enviarCuartel(wolverine);
+// ********** Interfaces en las clases **********
+var Mutante = /** @class */ (function () {
+    function Mutante() {
+    }
+    Mutante.prototype.regenerar = function (nombre) {
+        console.log(nombre + " regenerado");
+    };
+    return Mutante;
+}());
+var wolverineC = new Mutante();
+wolverineC.regenerar("Wolverine");
