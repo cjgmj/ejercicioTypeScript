@@ -150,4 +150,24 @@ let wolverineA = new XmenA("Wolverine", "Logan");
 
 console.log(wolverineA);
 
+// ********** Constructores privados (Singleton) **********
+class Apocalipsis {
+  static instancia: Apocalipsis;
+
+  private constructor(public nombre: String) {}
+
+  static llamarApocalipsis() {
+    if (!Apocalipsis.instancia) {
+      Apocalipsis.instancia = new Apocalipsis("Apocalipsis (único)");
+    }
+
+    return Apocalipsis.instancia;
+  }
+}
+
+// let apocalipsisFalso = new Apocalipsis("Apocalipsis (falso)"); // No se puede
+let apocalipsisReal = Apocalipsis.llamarApocalipsis();
+
+console.log(apocalipsisReal);
+
 export {};

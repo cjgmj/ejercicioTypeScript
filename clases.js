@@ -150,3 +150,19 @@ var XmenA = /** @class */ (function (_super) {
 }(Mutantes));
 var wolverineA = new XmenA("Wolverine", "Logan");
 console.log(wolverineA);
+// ********** Constructores privados (Singleton) **********
+var Apocalipsis = /** @class */ (function () {
+    function Apocalipsis(nombre) {
+        this.nombre = nombre;
+    }
+    Apocalipsis.llamarApocalipsis = function () {
+        if (!Apocalipsis.instancia) {
+            Apocalipsis.instancia = new Apocalipsis("Apocalipsis (único)");
+        }
+        return Apocalipsis.instancia;
+    };
+    return Apocalipsis;
+}());
+// let apocalipsisFalso = new Apocalipsis("Apocalipsis (falso)"); // No se puede
+var apocalipsisReal = Apocalipsis.llamarApocalipsis();
+console.log(apocalipsisReal);
