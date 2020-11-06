@@ -29,7 +29,10 @@ console.log(Validaciones.validarFecha(hoy));
 // } else {
 //   console.log("El texto no es válido");
 // }
-// Ejecutar en terminal el comando tsc --outFile build/app.js /validaciones/*
-// console.log(ValidacionesMultiple.validarTexto("Barry Allen"));
-// console.log(ValidacionesMultiple.validarTexto("All"));
-// console.log(ValidacionesMultiple.validarFecha(hoy));
+// Otra solución es ejecutar en terminal el comando tsc --outFile build/app.js /validaciones/fechas.ts /validaciones/textos.ts
+// e importar un único js en el HMTL.
+// ********** Importar namespaces **********
+/// <reference path="validaciones/textos.ts"/>
+// Ejecutar comando tsc --outFile public/app.js namespaces.ts
+console.log(ValidacionesMultiple.validarTexto("Barry Allen"));
+console.log(ValidacionesMultiple.validarTexto("All"));
