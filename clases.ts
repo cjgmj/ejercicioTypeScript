@@ -53,4 +53,34 @@ console.log(antman.cambiaEquipoPublico("cap"));
 
 console.log(antman);
 
+// ********** Herencia, super y definir propiedades en el constructor **********
+class AvengerH {
+  // Definir propiedades en el constructor
+  constructor(public nombre: string, private nombreReal: string) {
+    console.log("Constructor AvengerH");
+  }
+
+  protected getNombre(): string {
+    console.log("getNombre AvengerH (protected)");
+    return this.nombre;
+  }
+}
+
+class Xmen extends AvengerH {
+  constructor(nombre: string, nombreReal: string) {
+    console.log("Constructor Xmen");
+    super(nombre, nombreReal);
+  }
+
+  public getNombre(): string {
+    console.log("getNombre Xmen (public)");
+    return super.getNombre();
+  }
+}
+
+let ciclope: Xmen = new Xmen("Ciclope", "Scott");
+
+console.log(ciclope);
+console.log(ciclope.getNombre());
+
 export {};
