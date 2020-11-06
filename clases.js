@@ -133,3 +133,20 @@ var XmenE = /** @class */ (function () {
 var wolverineE = XmenE.crearXmen();
 console.log(XmenE.nombre);
 console.log(wolverineE);
+// ********** Clases abstractas **********
+var Mutantes = /** @class */ (function () {
+    function Mutantes(nombre, nombreReal) {
+        this.nombre = nombre;
+        this.nombreReal = nombreReal;
+    }
+    return Mutantes;
+}());
+var XmenA = /** @class */ (function (_super) {
+    __extends(XmenA, _super);
+    function XmenA() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return XmenA;
+}(Mutantes));
+var wolverineA = new XmenA("Wolverine", "Logan");
+console.log(wolverineA);

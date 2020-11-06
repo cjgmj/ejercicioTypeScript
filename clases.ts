@@ -139,4 +139,15 @@ let wolverineE = XmenE.crearXmen();
 console.log(XmenE.nombre);
 console.log(wolverineE);
 
+// ********** Clases abstractas **********
+abstract class Mutantes {
+  constructor(public nombre: String, public nombreReal: string) {}
+}
+
+class XmenA extends Mutantes {}
+
+let wolverineA = new XmenA("Wolverine", "Logan");
+
+console.log(wolverineA);
+
 export {};
