@@ -43,4 +43,36 @@ let lex = new VillanoD("Lex Luthor");
 (<any>lex).imprimirPlan();
 (<any>lex).imprimir();
 
+// ********** Decoradores de métodos **********
+function editable(esEditable: boolean): Function {
+  return function (
+    target: any,
+    nombrePropiedad: string,
+    descriptor: PropertyDescriptor
+  ) {
+    if (!esEditable) {
+      console.warn("No cambiaré de opinion");
+    }
+
+    descriptor.writable = esEditable;
+  };
+}
+
+class VillanoM {
+  constructor(public nombre: string) {}
+
+  @editable(false)
+  plan() {
+    console.log("Dominar el mundo");
+  }
+}
+let lexM = new VillanoM("Lex Luthor");
+
+// // Da error con @editable(false)
+// lexM.plan = function () {
+//   console.log("Cortar flores");
+// };
+
+lexM.plan();
+
 export {};

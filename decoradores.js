@@ -52,3 +52,30 @@ var VillanoD = /** @class */ (function () {
 var lex = new VillanoD("Lex Luthor");
 lex.imprimirPlan();
 lex.imprimir();
+// ********** Decoradores de métodos **********
+function editable(esEditable) {
+    return function (target, nombrePropiedad, descriptor) {
+        if (!esEditable) {
+            console.warn("No cambiaré de opinion");
+        }
+        descriptor.writable = esEditable;
+    };
+}
+var VillanoM = /** @class */ (function () {
+    function VillanoM(nombre) {
+        this.nombre = nombre;
+    }
+    VillanoM.prototype.plan = function () {
+        console.log("Dominar el mundo");
+    };
+    __decorate([
+        editable(false)
+    ], VillanoM.prototype, "plan", null);
+    return VillanoM;
+}());
+var lexM = new VillanoM("Lex Luthor");
+// // Da error con @editable(false)
+// lexM.plan = function () {
+//   console.log("Cortar flores");
+// };
+lexM.plan();
