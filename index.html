@@ -13,6 +13,15 @@
     <!-- <script src="build/app.js"></script>
     <script src="namespaces.js"></script> -->
     <!-- <script src="public/app.js"></script> -->
-    <script src="modulos.js"></script>
+    <!-- <script src="modulos.js"></script> -->
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+      SystemJS.config({
+        baseURL: "/",
+        defaultJSExtensions: true,
+      });
+
+      SystemJS.import("modulos.js");
+    </script>
   </body>
 </html>
