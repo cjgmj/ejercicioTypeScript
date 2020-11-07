@@ -33,14 +33,22 @@ function planVillano(constructor) {
         console.log("El plan de " + this.nombre + " es dominar el mundo");
     };
 }
+// ********** Decoradores anidados **********
+function imprimible(constructor) {
+    constructor.prototype.imprimir = function () {
+        console.log(this);
+    };
+}
 var VillanoD = /** @class */ (function () {
     function VillanoD(nombre) {
         this.nombre = nombre;
     }
     VillanoD = __decorate([
+        imprimible,
         planVillano
     ], VillanoD);
     return VillanoD;
 }());
 var lex = new VillanoD("Lex Luthor");
 lex.imprimirPlan();
+lex.imprimir();

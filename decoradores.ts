@@ -25,6 +25,14 @@ function planVillano(constructor: Function) {
   };
 }
 
+// ********** Decoradores anidados **********
+function imprimible(constructor: Function) {
+  constructor.prototype.imprimir = function () {
+    console.log(this);
+  };
+}
+
+@imprimible
 @planVillano
 class VillanoD {
   constructor(public nombre: string) {}
@@ -33,5 +41,6 @@ class VillanoD {
 let lex = new VillanoD("Lex Luthor");
 
 (<any>lex).imprimirPlan();
+(<any>lex).imprimir();
 
 export {};
