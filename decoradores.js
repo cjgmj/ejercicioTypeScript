@@ -61,6 +61,15 @@ function editable(esEditable) {
         descriptor.writable = esEditable;
     };
 }
+// ********** Decoradores de propiedades **********
+function editableProp(esEditable) {
+    return function (target, nombrePropiedad) {
+        var descriptor = {
+            writable: esEditable,
+        };
+        return descriptor;
+    };
+}
 var VillanoM = /** @class */ (function () {
     function VillanoM(nombre) {
         this.nombre = nombre;
@@ -69,11 +78,15 @@ var VillanoM = /** @class */ (function () {
         console.log("Dominar el mundo");
     };
     __decorate([
+        editableProp(false)
+    ], VillanoM.prototype, "nombre", void 0);
+    __decorate([
         editable(false)
     ], VillanoM.prototype, "plan", null);
     return VillanoM;
 }());
 var lexM = new VillanoM("Lex Luthor");
+console.log(lexM);
 // // Da error con @editable(false)
 // lexM.plan = function () {
 //   console.log("Cortar flores");

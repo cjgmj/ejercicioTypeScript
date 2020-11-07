@@ -58,8 +58,24 @@ function editable(esEditable: boolean): Function {
   };
 }
 
+// ********** Decoradores de propiedades **********
+function editableProp(esEditable: boolean): Function {
+  return function (target: any, nombrePropiedad: string) {
+    let descriptor: PropertyDescriptor = {
+      writable: esEditable,
+    };
+
+    return descriptor;
+  };
+}
+
 class VillanoM {
-  constructor(public nombre: string) {}
+  @editableProp(false)
+  public nombre: string;
+
+  constructor(nombre: string) {
+    this.nombre = nombre;
+  }
 
   @editable(false)
   plan() {
@@ -68,11 +84,17 @@ class VillanoM {
 }
 let lexM = new VillanoM("Lex Luthor");
 
+console.log(lexM);
+
 // // Da error con @editable(false)
 // lexM.plan = function () {
 //   console.log("Cortar flores");
 // };
 
 lexM.plan();
+
+// // Da error con @editableProp(false)
+// lexM.nombre = "Lex";
+// console.log(lexM);
 
 export {};
