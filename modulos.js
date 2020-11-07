@@ -1,5 +1,6 @@
 "use strict";
-// import { PI } from "./validaciones/numerosM";
+// Si se añade un path absoluto como ruta se buscará automáticamente
+// en node_modules
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -23,6 +24,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+// import { PI } from "./validaciones/numerosM";
 // ********** Default **********
 // "numeros" apunta a la función restar
 var numerosM_1 = __importDefault(require("./validaciones/numerosM"));

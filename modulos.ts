@@ -1,3 +1,6 @@
+// Si se añade un path absoluto como ruta se buscará automáticamente
+// en node_modules
+
 // import { PI } from "./validaciones/numerosM";
 
 // ********** Default **********
