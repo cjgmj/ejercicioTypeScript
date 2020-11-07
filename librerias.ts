@@ -1,4 +1,5 @@
 import "jquery";
+import Swal from "sweetalert2";
 
 console.log("Hola mundo");
 
@@ -11,4 +12,7 @@ $(() => {
   $("h1").css("background-color", "red");
 });
 
-$("#botAlerta").on("click", () => alert("Hola mundo desde TypeScript"));
+$("#botAlerta").on("click", () =>
+  // alert("Hola mundo desde TypeScript")
+  Swal.fire("Good job!", "You clicked the button!", "success")
+);

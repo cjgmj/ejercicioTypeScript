@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "jquery": "^3.5.1",
+    "sweetalert2": "^10.9.0",
     "systemjs": "^0.19.41"
   }
 }
