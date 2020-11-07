@@ -10,12 +10,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function consola(constructor) {
     console.log(constructor);
 }
+// ********** Decoradores de fábrica **********
+function imprimirConsola(imprimir) {
+    if (imprimir) {
+        return consola;
+    }
+    return null;
+}
+// @consola
 var Villano = /** @class */ (function () {
     function Villano(nombre) {
         this.nombre = nombre;
     }
     Villano = __decorate([
-        consola
+        imprimirConsola(true)
     ], Villano);
     return Villano;
 }());

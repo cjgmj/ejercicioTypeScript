@@ -71,7 +71,7 @@ let algo: any = 123;
 
 algo = "Hola";
 
-algo = function () {
+algo = function (): any {
   return null;
 };
 
