@@ -29,3 +29,10 @@ let deadpool = {
 
 console.log(functionGenerica<Heroe>(deadpool));
 console.log(functionGenerica<Villano>(deadpool));
+
+// ********** Arrays genéricos **********
+let heroes: Array<string> = ["Flash", "Batman", "Superman"];
+
+let villanos: string[] = ["Lex Luthor", "Joker"];
+
+export {};

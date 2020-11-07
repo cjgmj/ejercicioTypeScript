@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // ********** Funciones genéricas **********
 function devolver(arg) {
     return arg;
@@ -16,3 +17,6 @@ var deadpool = {
 };
 console.log(functionGenerica(deadpool));
 console.log(functionGenerica(deadpool));
+// ********** Arrays genéricos **********
+var heroes = ["Flash", "Batman", "Superman"];
+var villanos = ["Lex Luthor", "Joker"];
