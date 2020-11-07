@@ -1,0 +1,26 @@
+{
+  "name": "ejerciciotypescript",
+  "version": "1.0.0",
+  "description": "Para compilar el archivo de TypeScript a JavaScript ejecutamos en el terminal de comandos `tsc nombreArchivo`. No es necesario añadir la extensión de `.ts`.",
+  "main": "modulos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjgmj/ejercicioTypeScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjgmj/ejercicioTypeScript/issues"
+  },
+  "homepage": "https://github.com/cjgmj/ejercicioTypeScript#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "systemjs": "^6.7.1"
+  }
+}
