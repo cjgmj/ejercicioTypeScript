@@ -27,3 +27,20 @@ var Villano = /** @class */ (function () {
     ], Villano);
     return Villano;
 }());
+// ********** Ejemplo decorador **********
+function planVillano(constructor) {
+    constructor.prototype.imprimirPlan = function () {
+        console.log("El plan de " + this.nombre + " es dominar el mundo");
+    };
+}
+var VillanoD = /** @class */ (function () {
+    function VillanoD(nombre) {
+        this.nombre = nombre;
+    }
+    VillanoD = __decorate([
+        planVillano
+    ], VillanoD);
+    return VillanoD;
+}());
+var lex = new VillanoD("Lex Luthor");
+lex.imprimirPlan();

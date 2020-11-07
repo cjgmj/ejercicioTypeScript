@@ -18,4 +18,20 @@ class Villano {
   constructor(public nombre: string) {}
 }
 
+// ********** Ejemplo decorador **********
+function planVillano(constructor: Function) {
+  constructor.prototype.imprimirPlan = function () {
+    console.log(`El plan de ${this.nombre} es dominar el mundo`);
+  };
+}
+
+@planVillano
+class VillanoD {
+  constructor(public nombre: string) {}
+}
+
+let lex = new VillanoD("Lex Luthor");
+
+(<any>lex).imprimirPlan();
+
 export {};
