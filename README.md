@@ -16,6 +16,10 @@ Podemos ver el motivo del error [aquí](https://medium.com/@muravitskiy.mail/can
 
 Indica que el valor será desconocido en el momento de la instancia. Usaremos el modificador ! (Definite Assignment Assertion), para indicarle a TypeScript que sabemos que ese valor se definirá de alguna manera en el momento en que lo usemos, y que TypeScript no debe preocuparse de ese valor hasta entonces.
 
+#### Cast con +
+
+Para hacer un cast de String que contengan solo número y de booleans podemos poner un + delante de la variable para convertirlas a tipo number.
+
 ### Archivo tsconfig.json
 
 #### Controlar null

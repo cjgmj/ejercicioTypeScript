@@ -20,3 +20,16 @@ console.log(functionGenerica(deadpool));
 // ********** Arrays genéricos **********
 var heroes = ["Flash", "Batman", "Superman"];
 var villanos = ["Lex Luthor", "Joker"];
+// ********** Clases genéricas **********
+var Cuadrado = /** @class */ (function () {
+    function Cuadrado() {
+    }
+    Cuadrado.prototype.area = function () {
+        return +this.base * +this.altura;
+    };
+    return Cuadrado;
+}());
+var cuadrado = new Cuadrado();
+cuadrado.base = "10";
+cuadrado.altura = 10;
+console.log(cuadrado.area());
