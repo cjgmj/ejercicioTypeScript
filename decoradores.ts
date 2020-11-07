@@ -70,7 +70,7 @@ function editableProp(esEditable: boolean): Function {
 }
 
 class VillanoM {
-  @editableProp(false)
+  @editableProp(true)
   public nombre: string;
 
   constructor(nombre: string) {
@@ -96,5 +96,24 @@ lexM.plan();
 // // Da error con @editableProp(false)
 // lexM.nombre = "Lex";
 // console.log(lexM);
+
+// ********** Decoradores de parámetros **********
+function parametro(target: any, metodo: string, index: number) {
+  console.log(target, metodo, index);
+}
+
+class VillanoP {
+  constructor(public nombre: string) {}
+
+  imprimir(plan: boolean, @parametro mensaje: string): void {
+    if (plan) {
+      console.log(`El plan es: ${mensaje}`);
+    } else {
+      console.log(mensaje);
+    }
+  }
+}
+
+let lexP = new Villano("Lex Luthor");
 
 export {};

@@ -5,6 +5,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 // ********** Decoradores de clase **********
 function consola(constructor) {
@@ -78,7 +81,7 @@ var VillanoM = /** @class */ (function () {
         console.log("Dominar el mundo");
     };
     __decorate([
-        editableProp(false)
+        editableProp(true)
     ], VillanoM.prototype, "nombre", void 0);
     __decorate([
         editable(false)
@@ -92,3 +95,28 @@ console.log(lexM);
 //   console.log("Cortar flores");
 // };
 lexM.plan();
+// // Da error con @editableProp(false)
+// lexM.nombre = "Lex";
+// console.log(lexM);
+// ********** Decoradores de parámetros **********
+function parametro(target, metodo, index) {
+    console.log(target, metodo, index);
+}
+var VillanoP = /** @class */ (function () {
+    function VillanoP(nombre) {
+        this.nombre = nombre;
+    }
+    VillanoP.prototype.imprimir = function (plan, mensaje) {
+        if (plan) {
+            console.log("El plan es: " + mensaje);
+        }
+        else {
+            console.log(mensaje);
+        }
+    };
+    __decorate([
+        __param(1, parametro)
+    ], VillanoP.prototype, "imprimir", null);
+    return VillanoP;
+}());
+var lexP = new Villano("Lex Luthor");
